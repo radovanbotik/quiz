@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import Column from "./features/Column";
 import Dialog from "./features/Dialog";
+import logoSmall from "../../common/images/AT&T-sm.png";
 
 const initialData = {
   answers: {
@@ -133,7 +134,8 @@ const Quiz3 = () => {
 
   return (
     <div className="prose max-w-[inherit] flex-1 p-8 md:p-4">
-      <h1>Quiz</h1>
+      <h1>Test your knowledge:</h1>
+      <h4>Based on their content, sort the statements in the appropriate columns.</h4>
       <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart} onDragUpdate={onDragUpdate}>
         <div id="quiz3-container" className="mb-8 flex h-full  flex-col gap-2 md:flex-row">
           {data.columnOrder.map((column, index, arr) => {
