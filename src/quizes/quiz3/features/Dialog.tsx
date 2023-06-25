@@ -1,5 +1,3 @@
-import React from "react";
-
 const Dialog = ({ headline, content, status }) => {
   return (
     <dialog id="my_modal_2" className="modal">

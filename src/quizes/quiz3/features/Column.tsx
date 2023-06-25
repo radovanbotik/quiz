@@ -1,4 +1,3 @@
-import React from "react";
 import Answer from "./Answer";
 import { Droppable } from "react-beautiful-dnd";
 
