@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import Column from "./features/Column";
@@ -98,16 +99,6 @@ const Quiz3 = () => {
     // element.style.color = "fuchsia";
     element.classList.add("text-pink-500");
   };
-  const onDragUpdate = update => {
-    // const { destination } = update;
-    // const opacity = destination
-    //   ? Math.round(((destination.index / Object.keys(data.answers).length) * 1000) / 100) * 100
-    //   : 0;
-    // const container = document.querySelector("#quiz3-container").parentElement;
-    // container.classList.add(`bg-blue-${opacity}`);
-    // document.body.classList.add(`opacity-25`);
-    // document.body.classList.add(`opacity-{${opacity}}`);
-  };
 
   const onSubmit = () => {
     const statementsLength = data.columns["column-1"].answerIds.length;
@@ -154,9 +145,9 @@ const Quiz3 = () => {
         </a>
         . Based on their content, sort the statements in the appropriate columns.
       </h4>
-      <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart} onDragUpdate={onDragUpdate}>
+      <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
         <div id="quiz3-container" className="mb-8 flex h-full  flex-col gap-2 md:flex-row">
-          {data.columnOrder.map((column, index, arr) => {
+          {data.columnOrder.map(column => {
             return <Column key={data.columns[column].id} {...data.columns[column]} answers={data.answers} />;
           })}
         </div>
