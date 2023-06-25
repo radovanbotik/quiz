@@ -4,19 +4,18 @@ import { Droppable } from "react-beautiful-dnd";
 
 const Column = props => {
   const { id, title, answerIds, answers } = props;
-  console.log(answers["answer-1"].id);
   return (
-    <div className="flex flex-1 flex-col border-2 border-solid border-black p-4">
-      <div className="mb-4 bg-white">
-        <h5>{title}</h5>
-      </div>
+    <div className="flex min-h-max flex-1 flex-col gap-4 bg-zinc-200 p-4">
+      <h4>{title}</h4>
       <Droppable droppableId={id}>
         {(provided, snapshot) => {
           return (
             <div
               ref={provided.innerRef}
               {...provided.droppableProps}
-              className={`${snapshot.isDraggingOver ? "bg-slate-800" : "bg-white"} flex-1 transition-colors`}
+              className={`${
+                snapshot.isDraggingOver ? "bg-zinc-300" : "bg-zinc-200"
+              } flex-1 rounded-lg transition-colors`}
             >
               {answerIds.map((ans, index) => {
                 return <Answer key={answers[ans].id} {...answers[ans]} index={index} />;

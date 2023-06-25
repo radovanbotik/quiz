@@ -5,7 +5,7 @@ import Layout from "./layout/Layout.jsx";
 
 function App() {
   return (
-    <div className="flex h-full w-full place-content-center">
+    <div className="flex h-full w-full place-content-center bg-stone-200">
       <Layout>
         {/* <Quiz1 /> */}
         {/* <Quiz2 /> */}
