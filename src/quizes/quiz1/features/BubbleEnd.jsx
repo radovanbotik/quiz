@@ -1,8 +1,8 @@
 import React from "react";
 
-const Bubble = ({ position, displayName, reply, imageUrl }) => {
+const Bubble = ({ displayName, reply, imageUrl }) => {
   return (
-    <div className={`chat chat-${position}`}>
+    <div className="chat chat-end">
       <div className="chat-image avatar">
         <div className="w-16 rounded-full">
           <img src={imageUrl} alt="" />
