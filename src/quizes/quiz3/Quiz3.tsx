@@ -112,7 +112,7 @@ const Quiz3 = () => {
         } that needs to be sorted!`,
         status: "inProgress",
       });
-      window.my_modal_2.showModal();
+      document.querySelector("#my_modal_2").showModal();
     }
     const correctColumn = data.columns["column-2"].answerIds;
     // const evaluate = key.trueStatements.map(id => correctColumn.includes(id));
@@ -125,7 +125,7 @@ const Quiz3 = () => {
         content: `Mad lad, I know you could get this done 🎉!`,
         status: "success",
       });
-      window.my_modal_2.showModal();
+      document.querySelector("#my_modal_2").showModal();
     }
     if (statementsLength === 0 && !isCorrect) {
       setDialogData({
@@ -133,7 +133,7 @@ const Quiz3 = () => {
         content: `Don't give up, I know you can do this!😉!`,
         status: "error",
       });
-      window.my_modal_2.showModal();
+      document.querySelector("#my_modal_2").showModal();
     }
   };
 
