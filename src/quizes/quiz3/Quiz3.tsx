@@ -43,7 +43,14 @@ const key = {
 
 const Quiz3 = () => {
   const [data, setData] = useState(initialData);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogData, setDialogData] = useState({ headline: "", content: "", status: "inProgress" });
+
+  const handleCloseDialog = e => {
+    e.stopPropagation();
+    console.log(e);
+    setDialogOpen(false);
+  };
 
   const onDragEnd = result => {
     const element = document.querySelector(`[data-rbd-draggable-id=${result.draggableId}]`);
@@ -112,7 +119,7 @@ const Quiz3 = () => {
         } that needs to be sorted!`,
         status: "inProgress",
       });
-      document.querySelector("#my_modal_2").showModal();
+      setDialogOpen(true);
     }
     const correctColumn = data.columns["column-2"].answerIds;
     // const evaluate = key.trueStatements.map(id => correctColumn.includes(id));
@@ -125,7 +132,7 @@ const Quiz3 = () => {
         content: `Mad lad, I know you could get this done 🎉!`,
         status: "success",
       });
-      document.querySelector("#my_modal_2").showModal();
+      setDialogOpen(true);
     }
     if (statementsLength === 0 && !isCorrect) {
       setDialogData({
@@ -133,7 +140,7 @@ const Quiz3 = () => {
         content: `Don't give up, I know you can do this!😉!`,
         status: "error",
       });
-      document.querySelector("#my_modal_2").showModal();
+      setDialogOpen(true);
     }
   };
 
@@ -156,7 +163,13 @@ const Quiz3 = () => {
         <button className="btn-neutral btn w-full" onClick={onSubmit}>
           submit
         </button>
-        <Dialog headline={dialogData.headline} content={dialogData.content} status={dialogData.status} />
+        <Dialog
+          headline={dialogData.headline}
+          content={dialogData.content}
+          status={dialogData.status}
+          open={dialogOpen}
+          handleClose={handleCloseDialog}
+        />
       </DragDropContext>
     </div>
   );
