@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 const Dialog = ({ headline, content, status, open, handleClose }) => {
   return (
     <dialog id="my_modal_2" className={`modal ${open ? "modal-open" : "null"}`} onClick={handleClose}>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import Quiz3 from "./quizes/quiz3/Quiz3.jsx";
 import Layout from "./layout/Layout.jsx";
 

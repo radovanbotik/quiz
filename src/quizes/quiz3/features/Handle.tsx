@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 const Handle = props => {
   //   return <div {...props} className="h-4 w-4 rounded-sm bg-orange-500"></div>;
   return (

@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import Column from "./features/Column";

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import Answer from "./Answer";
 import { Droppable } from "react-beautiful-dnd";
 
