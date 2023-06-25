@@ -2,7 +2,7 @@ import React from "react";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex h-full w-full max-w-4xl items-center justify-center">
+    <div className="flex h-full w-full max-w-5xl items-center justify-center">
       {/* <div className="mockup-phone">
         <div className="camera"></div>
         <div className="display">

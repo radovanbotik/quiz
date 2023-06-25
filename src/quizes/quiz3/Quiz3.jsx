@@ -6,10 +6,16 @@ import logoSmall from "../../common/images/AT&T-sm.png";
 
 const initialData = {
   answers: {
-    "answer-1": { id: "answer-1", content: "This is an answer 1." },
-    "answer-2": { id: "answer-2", content: "This is an answer 2." },
-    "answer-3": { id: "answer-3", content: "This is an answer 3." },
-    "answer-4": { id: "answer-4", content: "This is an answer 4." },
+    "answer-1": {
+      id: "answer-1",
+      content: "Customer pays $27.78 monthly in instalments for a single device.",
+    },
+    "answer-2": { id: "answer-2", content: "Customer is eligible for early upgrade." },
+    "answer-3": {
+      id: "answer-3",
+      content: "Customer can make quick payment without signing in at 'att.com/fastpay'.",
+    },
+    "answer-4": { id: "answer-4", content: "Customer has same plan on each line." },
   },
   columns: {
     "column-1": {
@@ -135,7 +141,13 @@ const Quiz3 = () => {
   return (
     <div className="prose max-w-[inherit] flex-1 p-8 md:p-4">
       <h1>Test your knowledge:</h1>
-      <h4>Based on their content, sort the statements in the appropriate columns.</h4>
+      <h4>
+        Review this{" "}
+        <a target="_blank" href="https://www.att.com/idpassets/images/support/pdf/Wireless-Sample-Bill-Guide1.pdf">
+          bill
+        </a>
+        . Based on their content, sort the statements in the appropriate columns.
+      </h4>
       <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart} onDragUpdate={onDragUpdate}>
         <div id="quiz3-container" className="mb-8 flex h-full  flex-col gap-2 md:flex-row">
           {data.columnOrder.map((column, index, arr) => {
