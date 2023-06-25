@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import { Draggable } from "react-beautiful-dnd";
 import Handle from "./Handle";
 
 const Answer = ({ id, index, content }) => {
   return (
     <Draggable draggableId={id} index={index}>
-      {(provided, snapshot) => {
+      {provided => {
         // console.log(provided);
         return (
           <div
