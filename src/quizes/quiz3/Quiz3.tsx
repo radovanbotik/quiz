@@ -92,11 +92,11 @@ const Quiz3 = () => {
     element.classList.add("text-pink-500");
   };
   const onDragUpdate = update => {
-    const { destination } = update;
-    const opacity = destination
-      ? Math.round(((destination.index / Object.keys(data.answers).length) * 1000) / 100) * 100
-      : 0;
-    const container = document.querySelector("#quiz3-container").parentElement;
+    // const { destination } = update;
+    // const opacity = destination
+    //   ? Math.round(((destination.index / Object.keys(data.answers).length) * 1000) / 100) * 100
+    //   : 0;
+    // const container = document.querySelector("#quiz3-container").parentElement;
     // container.classList.add(`bg-blue-${opacity}`);
     // document.body.classList.add(`opacity-25`);
     // document.body.classList.add(`opacity-{${opacity}}`);

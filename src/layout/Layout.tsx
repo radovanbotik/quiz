@@ -1,5 +1,3 @@
-import React from "react";
-
 const Layout = ({ children }) => {
   return (
     <div className="flex h-full w-full max-w-5xl items-center justify-center">
